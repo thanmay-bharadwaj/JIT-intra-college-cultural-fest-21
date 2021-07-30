@@ -231,6 +231,10 @@ background: linear-gradient(to left, #360235, #8f0c5c) no-repeat center fixed; /
     margin-bottom: 2em;
 }
 
+.footer-left a{
+    color:rgb(29, 138, 205);
+}
+
 .footer-left img {
     width: 50px;
 }

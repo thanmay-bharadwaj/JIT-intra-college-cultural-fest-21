@@ -96,8 +96,8 @@ background: linear-gradient(to left, #EF629F, #EECDA3) no-repeat center fixed; /
 
 .clg_img img{
     margin-top: 40px;
-    width:50vh;
-    height: 12vh;
+    width:50%;
+    /* height: 12vh; */
 }
 
 .clg_desc{
@@ -200,7 +200,9 @@ background: linear-gradient(to left, #EF629F, #EECDA3) no-repeat center fixed; /
     padding-top: 50px;
 
 }
-
+.footer-left a{
+    color:rgb(29, 138, 205);
+}
 .footer-left p{
     /* padding-right: 20%; */
     color: #999;
