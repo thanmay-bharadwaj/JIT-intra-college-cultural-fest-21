@@ -4,19 +4,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins";
-    text-decoration: none;
 }
 
-body {
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    line-height: 1.618;
-    text-align: center;
+.color-white {
+    background: #db217f no-repeat center fixed;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #db217f, #300173) no-repeat center fixed;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #db217f, #300173) no-repeat center fixed;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 nav {
-    height: 50px;
+    height: 80px;
 }
 
 nav img {
@@ -61,46 +61,53 @@ nav ul li a:hover:before {
 }
 
 h1 {
+    color: whitesmoke;
     text-align: center;
-    margin-top: 25px;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* width: 100%;
-    height: 100%;   */
-    /* background: linear-gradient(#f00,#f0f); */
-    /* clip-path: circle(30% at right 70%); */
-}
-
-body::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* width: 100%;
-    height: 100%;  */
-    /* background: linear-gradient(#2196f3,#e91e63); */
-    /* clip-path: circle(20% at 10% 10%); */
-}
-
-.panel {
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.color-white {
-    background: #EECDA3 no-repeat center fixed;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #EF629F, #EECDA3)no-repeat center fixed;
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #EF629F, #EECDA3)no-repeat center fixed;
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.right_content h2 {
+    color: rgb(0, 0, 0);
+}
+
+.right_content button {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    background: #475058;
+    padding: 7px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    margin: 10px;
+}
+
+.right_content button:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.event_list {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.event_name {
+    margin-bottom: 20px;
 }
 
 .color-violet {
@@ -130,102 +137,138 @@ body::after {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.container {
-    width: 90%;
-    margin: 50px auto;
+.event_name a {
+    color: rgb(245, 223, 182);
 }
 
-.heading {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 50px;
+.popup_wrap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
 }
 
-.row {
+.overlay {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.popup_box {
+    background-color: #fff;
+    color: #333;
+    max-width: 700px;
+    height: 3 00px;
+    margin: 0 auto;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    border-radius: 5px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-flow: wrap;
+    flex-wrap: wrap;
+    overflow: auto;
 }
 
-.card {
-    width: 20%;
-    background: #fff;
-    border: 1px solid #ccc;
-    margin-bottom: 50px;
-    transition: 0.3s;
-    border-radius: 20px;
-}
-
-.card-header {
+.popup_box .right_content {
+    /* flex: 0 0 60%;
+     max-width: 60%; */
     text-align: center;
-    padding: 50px 10px;
-    /* background: linear-gradient(to right, #ff416c, #ff4b2b); */
-    background: rgb(221, 71, 129);
-    color: #fff;
-    border-radius: 20px;
-}
-
-.card-body {
-    padding: 30px 20px;
-    text-align: center;
-    font-size: 18px;
-}
-
-.card-body .btn {
-    display: block;
-    color: #fff;
-    text-align: center;
-    /* background: linear-gradient(to right, #ff416c, #ff4b2b); */
-    background: rgb(221, 71, 129);
-    margin-top: 30px;
-    text-decoration: none;
-    padding: 10px 3px;
-    border-radius: 10PX;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
-}
-
-@media screen and (max-width: 1000px) {
-    .card {
-        width: 40%;
-    }
-}
-
-@media screen and (max-width: 620px) {
-    .container {
-        width: 100%;
-    }
-    .heading {
-        padding: 20px;
-        font-size: 20px;
-    }
-    .card {
-        width: 80%;
-    }
-}
-
-.queries {
-    display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin-bottom: 50px;
-    color: rgb(255, 255, 255);
 }
 
-.queries a {
-    color: rgb(75, 75, 231);
+.popup_box .right_content h2,
+.popup_box .right_content h2 span {
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.popup_box .right_content h2 {
+    margin-bottom: 20px;
+}
+
+.popup_box .right_content p {
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.close_btn {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    z-index: 101;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close_btn::before,
+.close_btn::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: #333;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.close_btn::before {
+    transform: rotate(45deg);
+}
+
+.close_btn::after {
+    transform: rotate(-45deg);
+}
+
+@media(max-width:640px) {
+    .popup_box .right_content {
+        max-width: 100%;
+        padding-top: 10px;
+    }
+    .popup_wrap {
+        overflow: visible;
+    }
+    .popup_box .right_content h2 {
+        font-size: 22px;
+    }
+    .popup_box {
+        height: 100vh;
+        border-radius: 0px;
+        display: block;
+    }
 }
 
 .queries_head {
     text-align: center;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(245, 223, 182);
+}
+
+.queries {
+    color: rgb(245, 223, 182);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.queries a {
+    color: rgb(22, 105, 178);
 }
 
 .queries_contact1 {
