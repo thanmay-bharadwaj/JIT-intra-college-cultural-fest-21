@@ -113,7 +113,7 @@ body {
 
 .clg_img img {
     margin-top: 40px;
-    width: 50%;
+    width: 40%;
     /* height: 12vh; */
 }
 
@@ -157,7 +157,7 @@ body {
 }
 
 .queries a {
-    color: rgb(22, 105, 178);
+    color: rgb(22, 161, 241);
 }
 
 .queries_contact1 {
@@ -194,7 +194,6 @@ body {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    align-items: center;
     flex-flow: row wrap;
     padding: 50px;
     color: #fff;
@@ -208,6 +207,11 @@ body {
 .footer-left {
     margin-right: 1.25em;
     margin-bottom: 2em;
+    text-align: center;
+}
+
+.footer-left a {
+    color: rgb(29, 138, 205);
 }
 
 .footer-left img {
@@ -255,10 +259,6 @@ body {
     text-align: center;
     color: #999;
     padding-top: 50px;
-}
-
-.footer-left a {
-    color: rgb(29, 138, 205);
 }
 
 .footer-left p {
